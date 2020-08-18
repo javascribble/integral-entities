@@ -1,16 +1,16 @@
-﻿using Integral.Contexts;
-using Integral.Abstractions;
+﻿using Integral.Abstractions;
+using Microsoft.EntityFrameworkCore;
 
 namespace Integral.Facades
 {
     public abstract class EntityFacade : Executable, Disposable
     {
-        private readonly EntityContext entityContext;
+        private readonly DbContext dbContext;
 
-        protected EntityFacade(EntityContext entityContext) => this.entityContext = entityContext;
+        protected EntityFacade(DbContext dbContext) => this.dbContext = dbContext;
 
-        public virtual void Execute() => entityContext.SaveChanges();
+        public virtual void Execute() => dbContext.SaveChanges();
 
-        public virtual void Dispose() => entityContext.Dispose();
+        public virtual void Dispose() => dbContext.Dispose();
     }
 }
