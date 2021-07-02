@@ -4,7 +4,7 @@
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="Integral" Version="1.0.0" />
-    <PackageReference Include="Microsoft.EntityFrameworkCore.Proxies" Version="5.0.1" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Proxies" Version="5.0.7" />
   </ItemGroup>  
   <ItemGroup>
     <ProjectReference Include="..\Integral.Entities.Interface\Integral.Entities.Interface.csproj" />
